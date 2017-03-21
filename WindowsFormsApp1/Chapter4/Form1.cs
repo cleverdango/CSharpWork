@@ -31,7 +31,7 @@ namespace WindowsFormsApp1.Chapter4
             string s2 = "123";
             label1.Text = s1.Trim('1', ',');
             label1.Text = s2.PadLeft(3,'0');
-            
+            label1.Text = "Hello World";
         }
     }
 }
