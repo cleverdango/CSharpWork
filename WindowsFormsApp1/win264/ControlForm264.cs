@@ -75,7 +75,6 @@ namespace WindowsFormsApp1.win264
                 
                 lb_all.Items.Add("民族："+ cb_nation.Text);
               
-               
                 if (rb_party.Checked)
                 {
                     lb_all.Items.Add("政治面貌：党员");
