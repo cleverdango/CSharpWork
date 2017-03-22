@@ -60,24 +60,41 @@ namespace WindowsFormsApp1.win264
             {
                 if (mtb_no.Text.Length != 6) throw new Exception();
                 if (lb_name.Text.Length == 0) throw new Exception();
-                lb_all.Items.Add("学号：");
-                lb_all.Items.Add(mtb_no.Text);
-                lb_all.Items.Add("姓名：");
-                lb_all.Items.Add(tb_name.Text);
-                lb_all.Items.Add("生日：");
-                lb_all.Items.Add(dtp_birth.Text);
-                lb_all.Items.Add("生日：");
-                lb_all.Items.Add(dtp_birth.Text);
-                lb_all.Items.Add("生日：");
-                lb_all.Items.Add(dtp_birth.Text);
-                lb_all.Items.Add("生日：");
-                lb_all.Items.Add(dtp_birth.Text);
-                lb_all.Items.Add("生日：");
-                //lb_no.Text + mtb_no 
-                //lb_name.Text + tb_name.Text
-                //lb_birth.Text + dtp_birth.Text
-                //怎么改成遍历所有的数组标签
-                //外加label标签只获取前几个字符串
+                lb_all.Items.Add("学号："+ mtb_no.Text);
+                lb_all.Items.Add("姓名："+ tb_name.Text);
+                lb_all.Items.Add("出生日期："+ dtp_birth.Text); 
+                
+                if (rb_girl.Checked)
+                {
+                    lb_all.Items.Add("性别：女");
+                }
+                else
+                {
+                    lb_all.Items.Add("性别：男");
+                }
+                
+                lb_all.Items.Add("民族："+ cb_nation.Text);
+              
+               
+                if (rb_party.Checked)
+                {
+                    lb_all.Items.Add("政治面貌：党员");
+                }
+                else if(rb_member.Checked)
+                {
+                    lb_all.Items.Add("政治面貌：团员");
+                }
+                else
+                {
+                    lb_all.Items.Add("政治面貌：无");
+                }
+
+                lb_all.Items.Add("籍贯：" + cboSheng.Text + cboShi.Text);//省和市
+                
+               
+
+                /*todo:怎么改成遍历所有的数组标签
+                外加label标签只获取前几个字符串*/
             }
             catch (Exception)
             {
@@ -94,6 +111,29 @@ namespace WindowsFormsApp1.win264
 
         private void lb_all_SelectedIndexChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            foreach (Control ctr in this.Controls)
+            {
+                if (ctr is TextBox || ctr is ComboBox || ctr is MaskedTextBox )
+                {
+                    ctr.Text = "";
+                }
+                else if (ctr is ListBox)
+                {
+                    lb_all.Items.Clear();
+                }
+
+                
+            }
+            cboSheng.Text = "";
+            cboShi.Text = "";
+            rb_boy.Checked = true;
+            rb_member.Checked = true;
+            dtp_birth.Value = DateTime.Today;
 
         }
     }
