@@ -72,7 +72,6 @@ namespace WindowsFormsApp1.win264
                 {
                     lb_all.Items.Add("性别：男");
                 }
-                
                 lb_all.Items.Add("民族："+ cb_nation.Text);
               
                 if (rb_party.Checked)
