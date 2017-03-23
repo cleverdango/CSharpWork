@@ -9,7 +9,7 @@ namespace ConsoleApp1
     class Program
     {
        
-        static void Main1(string[] args)
+        static void Main(string[] args)
         {
             Console.WriteLine("=========211406264：成雯珺=========\n");
             Console.WriteLine("1--------实验12 继承与多态");
@@ -32,11 +32,11 @@ namespace ConsoleApp1
                 case '6': break;
                 case '0': break;
             }
-
+            
             Console.WriteLine("您已选择" + readkey[0]);
 
         }
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             Type type = Type.GetType("System.Math");
             System.Reflection.MethodInfo[] methods = type.GetMethods();

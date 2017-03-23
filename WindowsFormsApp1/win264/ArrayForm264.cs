@@ -29,7 +29,8 @@ namespace WindowsFormsApp1.win264
 
         private void bt_n_array_Click(object sender, EventArgs e)
         {
-            
+            String[] arrayInputs = tb_input.Lines;
+            lb_n_array.Text = "有" + arrayInputs.Length + "个元素";
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -40,7 +41,7 @@ namespace WindowsFormsApp1.win264
         private void bt_find_Click(object sender, EventArgs e)
         {
            
-            String[] arrayInputs = tb_input.Text.Split('\n').Select((v)=>v.Trim()).ToArray();
+            String[] arrayInputs = tb_input.Lines;
             
             String t = tb_find.Text;
             
@@ -65,7 +66,7 @@ namespace WindowsFormsApp1.win264
         }
         private void bt_sort_Click(object sender, EventArgs e)
         {
-            String[] arrayInputs = tb_input.Text.Split('\n');
+            String[] arrayInputs = tb_input.Lines;
             Array.Sort(arrayInputs);
             for (int i = 0; i < arrayInputs.Length; i++)
             {

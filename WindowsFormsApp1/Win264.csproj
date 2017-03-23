@@ -45,17 +45,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Chapter4\Form1.cs">
+    <Compile Include="OOP264\TypeForm264.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Chapter4\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Chapter4\Form4_3.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Chapter4\Form4_3.Designer.cs">
-      <DependentUpon>Form4_3.cs</DependentUpon>
+    <Compile Include="OOP264\TypeForm264.Designer.cs">
+      <DependentUpon>TypeForm264.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -83,11 +77,8 @@
     <Compile Include="MainForm264.Designer.cs">
       <DependentUpon>MainForm264.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Chapter4\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Chapter4\Form4_3.resx">
-      <DependentUpon>Form4_3.cs</DependentUpon>
+    <EmbeddedResource Include="OOP264\TypeForm264.resx">
+      <DependentUpon>TypeForm264.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -124,7 +115,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="OOP264\" />
+    <ProjectReference Include="..\Library264\Library264.csproj">
+      <Project>{c7280c3a-4ef2-4b48-9d4b-6cc267401913}</Project>
+      <Name>Library264</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

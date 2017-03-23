@@ -30,13 +30,13 @@ namespace WindowsFormsApp1.win264
 
         private void button3_Click(object sender, EventArgs e)
         {
-            ArrayForm264 form3 = new ArrayForm264();
-            form3.Show();
+           
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            ArrayForm264 form3 = new ArrayForm264();
+            form3.Show();
         }
     }
 }

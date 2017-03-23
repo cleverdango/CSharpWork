@@ -120,7 +120,7 @@
             this.rb_boy.Checked = true;
             this.rb_boy.Location = new System.Drawing.Point(117, 137);
             this.rb_boy.Name = "rb_boy";
-            this.rb_boy.Size = new System.Drawing.Size(41, 16);
+            this.rb_boy.Size = new System.Drawing.Size(54, 26);
             this.rb_boy.TabIndex = 8;
             this.rb_boy.TabStop = true;
             this.rb_boy.Text = "男&B";
@@ -131,7 +131,7 @@
             this.rb_girl.AutoSize = true;
             this.rb_girl.Location = new System.Drawing.Point(185, 137);
             this.rb_girl.Name = "rb_girl";
-            this.rb_girl.Size = new System.Drawing.Size(41, 16);
+            this.rb_girl.Size = new System.Drawing.Size(54, 26);
             this.rb_girl.TabIndex = 9;
             this.rb_girl.TabStop = true;
             this.rb_girl.Text = "女&G";
@@ -220,7 +220,7 @@
             this.rb_none.AutoSize = true;
             this.rb_none.Location = new System.Drawing.Point(40, 65);
             this.rb_none.Name = "rb_none";
-            this.rb_none.Size = new System.Drawing.Size(41, 16);
+            this.rb_none.Size = new System.Drawing.Size(54, 26);
             this.rb_none.TabIndex = 2;
             this.rb_none.TabStop = true;
             this.rb_none.Text = "无&W";
@@ -232,7 +232,7 @@
             this.rb_member.Checked = true;
             this.rb_member.Location = new System.Drawing.Point(40, 42);
             this.rb_member.Name = "rb_member";
-            this.rb_member.Size = new System.Drawing.Size(53, 16);
+            this.rb_member.Size = new System.Drawing.Size(66, 26);
             this.rb_member.TabIndex = 1;
             this.rb_member.TabStop = true;
             this.rb_member.Text = "团员&T";
@@ -243,7 +243,7 @@
             this.rb_party.AutoSize = true;
             this.rb_party.Location = new System.Drawing.Point(40, 20);
             this.rb_party.Name = "rb_party";
-            this.rb_party.Size = new System.Drawing.Size(53, 16);
+            this.rb_party.Size = new System.Drawing.Size(66, 26);
             this.rb_party.TabIndex = 0;
             this.rb_party.TabStop = true;
             this.rb_party.Text = "党员&D";
@@ -362,7 +362,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(672, 397);
+            this.ClientSize = new System.Drawing.Size(637, 409);
             this.Controls.Add(this.lb_all);
             this.Controls.Add(this.dtp_birth);
             this.Controls.Add(this.mtb_no);
