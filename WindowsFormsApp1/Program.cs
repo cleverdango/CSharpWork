@@ -16,7 +16,8 @@ namespace WindowsFormsApp1.win264
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ControlForm264());
+         
+            Application.Run(new MainForm264());
         }
     }
 }

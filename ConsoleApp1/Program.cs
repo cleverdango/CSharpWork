@@ -3,14 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Library264;
 namespace ConsoleApp1
 {
     class Program
     {
+
        
         static void Main(string[] args)
         {
+            
             Console.WriteLine("=========211406264：成雯珺=========\n");
             Console.WriteLine("1--------实验12 继承与多态");
             Console.WriteLine("2--------实验13 集合排序的多种实现");
@@ -24,23 +26,33 @@ namespace ConsoleApp1
             string readkey = Console.ReadLine();
             switch (readkey[0])
             {
-                case '1': break;
-                case '2': break;
-                case '3': break;
-                case '4': break;
-                case '5': break;
-                case '6': break;
+                case '1':
+                    TestDraw264.DrawShap();
+                    break;
+                case '2':
+                    TestSort264.Sort();
+                    break;
+                case '3':
+                    TestSort264.SortWithLINQ();
+                    break;
+                case '4':
+                    TestFind264.Find();
+                    break;
+                case '5':
+                    TestFind264.FindWithLINQ();
+                    break;
+                case '6':
+                    TestEvent264.Test();
+                    break;
                 case '0': break;
             }
-            
-            Console.WriteLine("您已选择" + readkey[0]);
 
+            //Console.WriteLine("您已选择" + readkey[0]);
+            Console.ReadLine();
         }
         static void Main1(string[] args)
         {
-            Type type = Type.GetType("System.Math");
-            System.Reflection.MethodInfo[] methods = type.GetMethods();
-            
+           
             
         }
 

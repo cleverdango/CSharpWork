@@ -46,13 +46,6 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "CustormerType",
-            "Degree",
-            "StaffState",
-            "TourState",
-            "Area",
-            "SceneType"});
             this.comboBox1.Location = new System.Drawing.Point(234, 39);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 20);
@@ -82,13 +75,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(949, 693);
+            this.ClientSize = new System.Drawing.Size(466, 532);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label1);
             this.Name = "TypeForm264";
             this.Text = "TypeForm264";
+            this.Load += new System.EventHandler(this.TypeForm264_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

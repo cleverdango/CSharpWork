@@ -45,6 +45,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="OOP264\BigNumForm264.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OOP264\BigNumForm264.Designer.cs">
+      <DependentUpon>BigNumForm264.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OOP264\ComplexForm264.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OOP264\ComplexForm264.Designer.cs">
+      <DependentUpon>ComplexForm264.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OOP264\DeckForm264.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OOP264\DeckForm264.designer.cs">
+      <DependentUpon>DeckForm264.cs</DependentUpon>
+    </Compile>
     <Compile Include="OOP264\TypeForm264.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +95,27 @@
     <Compile Include="MainForm264.Designer.cs">
       <DependentUpon>MainForm264.cs</DependentUpon>
     </Compile>
+    <Compile Include="win264\ListForm264.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="win264\ListForm264.designer.cs">
+      <DependentUpon>ListForm264.cs</DependentUpon>
+    </Compile>
+    <Compile Include="win264\SplitForm264.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="win264\SplitForm264.designer.cs">
+      <DependentUpon>SplitForm264.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="OOP264\BigNumForm264.resx">
+      <DependentUpon>BigNumForm264.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OOP264\ComplexForm264.resx">
+      <DependentUpon>ComplexForm264.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OOP264\DeckForm264.resx">
+      <DependentUpon>DeckForm264.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OOP264\TypeForm264.resx">
       <DependentUpon>TypeForm264.cs</DependentUpon>
     </EmbeddedResource>
@@ -100,6 +139,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm264.resx">
       <DependentUpon>MainForm264.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="win264\ListForm264.resx">
+      <DependentUpon>ListForm264.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="win264\SplitForm264.resx">
+      <DependentUpon>SplitForm264.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -32,6 +32,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -40,8 +41,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BigNum264.cs" />
+    <Compile Include="ComplexNumber264.cs" />
+    <Compile Include="Deck264.cs" />
+    <Compile Include="Ellipse264.cs" />
     <Compile Include="Enum264.cs" />
+    <Compile Include="Product264.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rectangle264.cs" />
+    <Compile Include="Schedule264.cs" />
+    <Compile Include="ScheduleChangedEventArgs264.cs" />
+    <Compile Include="Shap264.cs" />
+    <Compile Include="Student264.cs" />
+    <Compile Include="Teacher264.cs" />
+    <Compile Include="TestDraw264.cs" />
+    <Compile Include="TestEvent264.cs" />
+    <Compile Include="TestFind264.cs" />
+    <Compile Include="TestSort264.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
