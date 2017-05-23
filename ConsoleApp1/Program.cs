@@ -8,11 +8,14 @@ namespace ConsoleApp1
 {
     class Program
     {
+        delegate int TestCounter();
 
-       
+ 
+
         static void Main(string[] args)
         {
-            
+
+
             Console.WriteLine("=========211406264：成雯珺=========\n");
             Console.WriteLine("1--------实验12 继承与多态");
             Console.WriteLine("2--------实验13 集合排序的多种实现");

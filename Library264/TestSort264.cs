@@ -8,14 +8,11 @@ namespace Library264
 {
     public static class TestSort264
     {
-        static Action<Student264> displayAll =
-            (stu => Console.WriteLine(stu.ToString()));
-        static Action<Student264> displayName =
-            (stu => Console.WriteLine("ID={0}\t{1}", stu.ID, stu.Name));
-        static Action<Student264> displaySorce =
-            (stu => Console.WriteLine("ID={0}\t{1}\t{2}", stu.ID, stu.Name, stu.Score));
-        static Action<Student264> displaySource =
-            (stu => Console.WriteLine("ID={0}\t{1}\t{2}", stu.ID, stu.Name, stu.Source));
+        static Action<Student264> displayAll = (stu => Console.WriteLine("ID={0}\t{1}\t{2}\t{3}\r\n", stu.ID, stu.Name, stu.Score, stu.Source));
+        static Action<Student264> displayName = (stu => Console.WriteLine("ID={0}\t{1}\r\n", stu.ID, stu.Name));
+        static Action<Student264> displayScore = (stu => Console.WriteLine("ID={0}\t{1}\t{2}\r\n", stu.ID, stu.Name, stu.Score));
+        static Action<Student264> displaySource = (stu => Console.WriteLine("ID={0}\t{1}\t{2}\r\n", stu.ID, stu.Name, stu.Source));
+
 
         private static List<Student264> buildStudents()
         {
@@ -33,28 +30,24 @@ namespace Library264
             List<Student264> students = buildStudents();
 
             Console.WriteLine("1.按学号排序(使用默认比较方法)");
-            students.Sort();
-            students.ForEach(displayAll);
+            students.Sort();//自动调用CompareTo
 
             Console.WriteLine("\r\n2.按姓名排序(使用委托对象)");
-            Comparison<Student264> byName = sortByName;
-            students.Sort(byName);
-           
-           
+            //Comparison<Student264> byName = sortByName;
+            students.Sort(sortByName);
             students.ForEach(displayName);
 
             Console.WriteLine("\r\n3.按成绩排序(使用匿名方法)");
-            students.Sort(
-                delegate (Student264 stuA, Student264 stuB)
-                {
-                    return stuA.Score - stuB.Score;
-                }
-            );
-            students.ForEach(displaySorce);
+            students.Sort(delegate (Student264 s1, Student264 s2)
+            {
+                return String.Compare(s1.Score.ToString(), s2.Score.ToString());
+            });
+            students.ForEach(displayScore);
 
             Console.WriteLine("\r\n4.按生源地排序(Lambda表达式)");
-            students.Sort((stuA, stuB) => String.Compare(stuA.Source, stuB.Source));
+            students.Sort((s1, s2) => String.Compare(s1.Source, s2.Source));
             students.ForEach(displaySource);
+
         }
 
         private static int sortByName(Student264 s1, Student264 s2)
@@ -65,31 +58,35 @@ namespace Library264
         public static void SortWithLINQ()
         {
             List<Student264> students = buildStudents();
-
-            var querySortID = from s in students
-                              orderby s.ID ascending
-                              select s;
+            var r1 =
+            from stu in students
+            orderby stu.Score
+            select stu;
             Console.WriteLine("1.按学号排序");
-            querySortID.ToList().ForEach(displayAll);
+            r1.ToList().ForEach(displayName);
 
-            var querySortName = from s in students
-                                orderby s.Name ascending
-                                select s;
+            var r2 =
+                from stu in students
+                orderby stu.Name
+                select stu;
             Console.WriteLine("\r\n2.按姓名排序");
-            querySortName.ToList().ForEach(displayName);
+            r2.ToList().ForEach(displayName);
 
-            var querySortScore = from s in students
-                                 orderby s.Score ascending
-                                 select s;
+
+            var r3 =
+                from stu in students
+                orderby stu.Score
+                select stu;
             Console.WriteLine("\r\n3.按成绩排序");
-            querySortScore.ToList().ForEach(displaySorce);
+            r3.ToList().ForEach(displayScore);
 
-
-            var querySortSource = from s in students
-                                  orderby s.Source ascending
-                                  select s;
+            var r4 =
+                from stu in students
+                orderby stu.Source
+                select stu;
             Console.WriteLine("\r\n4.按生源地排序");
-            querySortSource.ToList().ForEach(displaySource);
+            r4.ToList().ForEach(displaySource);
+
         }
 
 

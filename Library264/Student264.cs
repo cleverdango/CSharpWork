@@ -20,7 +20,7 @@ namespace Library264
         }
         public override string ToString()
         {
-            return String.Format("ID={0}\t{1}\t{2}\t{3}", this.ID, this.Name, this.Score, this.Source);
+            throw new NotImplementedException();
         }
         public Student264() { }
         public Student264(string Name)
